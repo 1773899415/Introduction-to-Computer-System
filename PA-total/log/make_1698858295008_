@@ -1,0 +1,5 @@
+>
+make-[1]: Entering directory '/home/pa221220132/pa_nju/nemu'
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/main.o src/main.c
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/monitor/ui.o src/monitor/ui.c
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/nemu'

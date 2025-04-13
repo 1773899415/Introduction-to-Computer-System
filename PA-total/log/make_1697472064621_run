@@ -1,0 +1,163 @@
+> run
+cd nemu && make
+------make------
+1697472065119
+Tue Oct 17 00:01:05 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/nemu'
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/cpu/decode/opcode_ref.o src/cpu/decode/opcode_ref.c
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/cpu/decode/opcode.o src/cpu/decode/opcode.c
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/cpu/instr/call.o src/cpu/instr/call.c
+gcc -ggdb3 -MMD -MP -Wall -Werror -O2 -I./include -I../include -I../libs -I../libs/nemu-ref/include   -c -o src/cpu/instr/sub.o src/cpu/instr/sub.c
+gcc -o nemu src/main.o src/monitor/ui.o src/monitor/elf.o src/monitor/breakpoint.o src/monitor/expr.o src/parse_args.o src/cpu/fpu.o src/cpu/test/alu_test.o src/cpu/test/fpu_test.o src/cpu/reg.o src/cpu/intr.o src/cpu/alu.o src/cpu/cpu.o src/cpu/decode/opcode_ref.o src/cpu/decode/operand.o src/cpu/decode/opcode.o src/cpu/decode/debug.o src/cpu/decode/sib.o src/cpu/decode/modrm.o src/cpu/instr/xor.o src/cpu/instr/group.o src/cpu/instr/leave.o src/cpu/instr/jcc.o src/cpu/instr/lea.o src/cpu/instr/push.o src/cpu/instr/lgdt.o src/cpu/instr/and.o src/cpu/instr/data_size.o src/cpu/instr/cli.o src/cpu/instr/out.o src/cpu/instr/opcode_2_byte.o src/cpu/instr/add.o src/cpu/instr/inv.o src/cpu/instr/bt.o src/cpu/instr/rep_repe.o src/cpu/instr/ret.o src/cpu/instr/sti.o src/cpu/instr/call.o src/cpu/instr/setcc.o src/cpu/instr/shr.o src/cpu/instr/cltd.o src/cpu/instr/idiv.o src/cpu/instr/int_.o src/cpu/instr/or.o src/cpu/instr/cmov.o src/cpu/instr/test.o src/cpu/instr/jmp.o src/cpu/instr/in.o src/cpu/instr/adc.o src/cpu/instr/dec.o src/cpu/instr/div.o src/cpu/instr/stos.o src/cpu/instr/lidt.o src/cpu/instr/inc.o src/cpu/instr/movs.o src/cpu/instr/not.o src/cpu/instr/nemu_trap.o src/cpu/instr/flags.o src/cpu/instr/sbb.o src/cpu/instr/mov.o src/cpu/instr/sar.o src/cpu/instr/x87.o src/cpu/instr/cmps.o src/cpu/instr/sub.o src/cpu/instr/nop.o src/cpu/instr/cmp.o src/cpu/instr/cbw.o src/cpu/instr/hlt.o src/cpu/instr/imul.o src/cpu/instr/mul.o src/cpu/instr/neg.o src/cpu/instr/iret.o src/cpu/instr/pop.o src/cpu/instr/shl.o src/device/dev/ide.o src/device/dev/audio.o src/device/dev/serial.o src/device/dev/vga.o src/device/dev/audio-web.o src/device/dev/vga-palette.o src/device/dev/timer.o src/device/dev/keyboard.o src/device/sdl.o src/device/i8259_pic.o src/device/io/mm_io.o src/device/io/port_io.o src/memory/memory.o src/memory/mmu/tlb.o src/memory/mmu/segment.o src/memory/mmu/page.o src/memory/mmu/cache.o ../libs/nemu-ref/lib-nemu-ref.a -lreadline -lSDL
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/nemu'
+cd testcase && make
+------make------
+1697472065689
+Tue Oct 17 00:01:05 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/testcase'
+gcc -ggdb3 -MMD -MP -Wall -m32 -march=i386 -fno-pic -fno-builtin -fno-stack-protector -I../include -I../libs/newlib/include -c -o src/start.o start.S	
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/testcase'
+cd kernel && make
+------make------
+1697472065728
+Tue Oct 17 00:01:05 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/kernel'
+make-[1]: 'kernel' is up to date.
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/kernel'
+./nemu/nemu --testcase mov
+NEMU load and execute img: [1m[32m./testcase/bin/mov.img[0m  elf: [1m[36m./testcase/bin/mov[0m
+(nemu) si  si
+00030000:   e9 00 00 00 00                            jmp $0x0
+(nemu) si
+00030005:   b8 00 00 00 00                            movl $0x0, %eax
+(nemu) si
+0003000a:   bb 00 00 00 00                            movl $0x0, %ebx
+(nemu) si
+0003000f:   b9 00 00 00 00                            movl $0x0, %ecx
+(nemu) si 10000 
+00030014:   ba 00 00 00 00                            movl $0x0, %edx
+00030019:   b9 00 80 00 00                            movl $0x8000, %ecx
+0003001e:   66 bb 00                                  movw $0x0, %bx
+00030022:   b7 00                                     movb $0x0, %bh
+00030024:   c7 05 34 12 00 00 01 00 00 00             movl $0x1, 0x1234
+0003002e:   66 c7 05 34 12 00 00 01                   movw $0x1, 0x1234
+00030037:   c6 05 34 12 00 00 01                      movb $0x1, 0x1234
+0003003e:   c7 01 01 00 00 00                         movl $0x1, (%ecx)
+00030044:   66 c7 01 01                               movw $0x1, (%ecx)
+00030049:   c6 01 01                                  movb $0x1, (%ecx)
+0003004c:   c7 04 99 01 00 00 00                      movl $0x1, (%ecx,%ebx,4)
+00030053:   66 c7 04 99 01                            movw $0x1, (%ecx,%ebx,4)
+00030059:   c6 04 99 01                               movb $0x1, (%ecx,%ebx,4)
+0003005d:   c7 41 02 01 00 00 00                      movl $0x1, 0x2(%ecx)
+00030064:   66 c7 41 02 01                            movw $0x1, 0x2(%ecx)
+0003006a:   c6 41 02 01                               movb $0x1, 0x2(%ecx)
+0003006e:   c7 41 fe 01 00 00 00                      movl $0x1, -0x2(%ecx)
+00030075:   66 c7 41 fe 01                            movw $0x1, -0x2(%ecx)
+0003007b:   c6 41 fe 01                               movb $0x1, -0x2(%ecx)
+0003007f:   c7 44 99 02 01 00 00 00                   movl $0x1, 0x2(%ecx,%ebx,4)
+00030087:   66 c7 44 99 02 01                         movw $0x1, 0x2(%ecx,%ebx,4)
+0003008e:   c6 44 99 02 01                            movb $0x1, 0x2(%ecx,%ebx,4)
+00030093:   c7 44 99 fe 01 00 00 00                   movl $0x1, -0x2(%ecx,%ebx,4)
+0003009b:   66 c7 44 99 fe 01                         movw $0x1, -0x2(%ecx,%ebx,4)
+000300a2:   c6 44 99 fe 01                            movb $0x1, -0x2(%ecx,%ebx,4)
+000300a7:   c7 81 00 20 00 00 01 00 00 00             movl $0x1, 0x2000(%ecx)
+000300b1:   66 c7 81 00 20 00 00 01                   movw $0x1, 0x2000(%ecx)
+000300ba:   c6 81 00 20 00 00 01                      movb $0x1, 0x2000(%ecx)
+000300c1:   c7 81 00 e0 ff ff 01 00 00 00             movl $0x1, -0x2000(%ecx)
+000300cb:   66 c7 81 00 e0 ff ff 01                   movw $0x1, -0x2000(%ecx)
+000300d4:   c6 81 00 e0 ff ff 01                      movb $0x1, -0x2000(%ecx)
+000300db:   c7 84 99 00 20 00 00 01 00 00 00          movl $0x1, 0x2000(%ecx,%ebx,4)
+000300e6:   66 c7 84 99 00 20 00 00 01                movw $0x1, 0x2000(%ecx,%ebx,4)
+000300f0:   c6 84 99 00 20 00 00 01                   movb $0x1, 0x2000(%ecx,%ebx,4)
+000300f8:   c7 84 99 00 e0 ff ff 01 00 00 00          movl $0x1, -0x2000(%ecx,%ebx,4)
+00030103:   66 c7 84 99 00 e0 ff ff 01                movw $0x1, -0x2000(%ecx,%ebx,4)
+0003010d:   c6 84 99 00 e0 ff ff 01                   movb $0x1, -0x2000(%ecx,%ebx,4)
+00030115:   89 c3                                     movl %eax, %ebx
+00030117:   66 89                                     movw %ax, %bx
+0003011a:   88 e3                                     movb %ah, %bl
+0003011c:   a3 34 12 00 00                            movl %eax, 0x1234
+00030121:   66 a3 34 12 00                            movw %ax, 0x1234
+00030127:   a2 34 12 00 00                            movb %al, 0x1234
+0003012c:   88 25 34 12 00 00                         movb %ah, 0x1234
+00030132:   89 03                                     movl %eax, (%ebx)
+00030134:   89 04 99                                  movl %eax, (%ecx,%ebx,4)
+00030137:   66 89 04                                  movw %ax, (%ecx,%ebx,4)
+0003013b:   88 24 99                                  movb %ah, (%ecx,%ebx,4)
+0003013e:   89 41 02                                  movl %eax, 0x2(%ecx)
+00030141:   66 89 41                                  movw %ax, 0x2(%ecx)
+00030145:   88 61 02                                  movb %ah, 0x2(%ecx)
+00030148:   89 44 99 02                               movl %eax, 0x2(%ecx,%ebx,4)
+0003014c:   66 89 44 99                               movw %ax, 0x2(%ecx,%ebx,4)
+00030151:   88 64 99 02                               movb %ah, 0x2(%ecx,%ebx,4)
+00030155:   89 81 00 20 00 00                         movl %eax, 0x2000(%ecx)
+0003015b:   66 89 81 00 20 00                         movw %ax, 0x2000(%ecx)
+00030162:   88 a1 00 20 00 00                         movb %ah, 0x2000(%ecx)
+00030168:   89 84 99 00 20 00 00                      movl %eax, 0x2000(%ecx,%ebx,4)
+0003016f:   66 89 84 99 00 20 00                      movw %ax, 0x2000(%ecx,%ebx,4)
+00030177:   88 a4 99 00 20 00 00                      movb %ah, 0x2000(%ecx,%ebx,4)
+0003017e:   89 d3                                     movl %edx, %ebx
+00030180:   66 89                                     movw %dx, %bx
+00030183:   88 f3                                     movb %dh, %bl
+00030185:   89 15 34 12 00 00                         movl %edx, 0x1234
+0003018b:   66 89 15 34 12 00                         movw %dx, 0x1234
+00030192:   88 15 34 12 00 00                         movb %dl, 0x1234
+00030198:   88 35 34 12 00 00                         movb %dh, 0x1234
+0003019e:   89 13                                     movl %edx, (%ebx)
+000301a0:   89 14 99                                  movl %edx, (%ecx,%ebx,4)
+000301a3:   66 89 14                                  movw %dx, (%ecx,%ebx,4)
+000301a7:   88 34 99                                  movb %dh, (%ecx,%ebx,4)
+000301aa:   89 51 02                                  movl %edx, 0x2(%ecx)
+000301ad:   66 89 51                                  movw %dx, 0x2(%ecx)
+000301b1:   88 71 02                                  movb %dh, 0x2(%ecx)
+000301b4:   89 54 99 02                               movl %edx, 0x2(%ecx,%ebx,4)
+000301b8:   66 89 54 99                               movw %dx, 0x2(%ecx,%ebx,4)
+000301bd:   88 74 99 02                               movb %dh, 0x2(%ecx,%ebx,4)
+000301c1:   89 91 00 20 00 00                         movl %edx, 0x2000(%ecx)
+000301c7:   66 89 91 00 20 00                         movw %dx, 0x2000(%ecx)
+000301ce:   88 b1 00 20 00 00                         movb %dh, 0x2000(%ecx)
+000301d4:   89 94 99 00 20 00 00                      movl %edx, 0x2000(%ecx,%ebx,4)
+000301db:   66 89 94 99 00 20 00                      movw %dx, 0x2000(%ecx,%ebx,4)
+000301e3:   88 b4 99 00 20 00 00                      movb %dh, 0x2000(%ecx,%ebx,4)
+000301ea:   a1 34 12 00 00                            movl 0x1234, %eax
+000301ef:   66 a1 34 12 00                            movw 0x1234, %ax
+000301f5:   a0 34 12 00 00                            movb 0x1234, %al
+000301fa:   8a 25 34 12 00 00                         movb 0x1234, %ah
+00030200:   8b 03                                     movl (%ebx), %eax
+00030202:   8b 04 99                                  movl (%ecx,%ebx,4), %eax
+00030205:   66 8b 04                                  movw (%ecx,%ebx,4), %ax
+00030209:   8a 24 99                                  movb (%ecx,%ebx,4), %ah
+0003020c:   8b 41 02                                  movl 0x2(%ecx), %eax
+0003020f:   66 8b 41                                  movw 0x2(%ecx), %ax
+00030213:   8a 61 02                                  movb 0x2(%ecx), %ah
+00030216:   8b 44 99 02                               movl 0x2(%ecx,%ebx,4), %eax
+0003021a:   66 8b 44 99                               movw 0x2(%ecx,%ebx,4), %ax
+0003021f:   8a 64 99 02                               movb 0x2(%ecx,%ebx,4), %ah
+00030223:   8b 81 00 20 00 00                         movl 0x2000(%ecx), %eax
+00030229:   66 8b 81 00 20 00                         movw 0x2000(%ecx), %ax
+00030230:   8a a1 00 20 00 00                         movb 0x2000(%ecx), %ah
+00030236:   8b 84 99 00 20 00 00                      movl 0x2000(%ecx,%ebx,4), %eax
+0003023d:   66 8b 84 99 00 20 00                      movw 0x2000(%ecx,%ebx,4), %ax
+00030245:   8a a4 99 00 20 00 00                      movb 0x2000(%ecx,%ebx,4), %ah
+0003024c:   8b 15 34 12 00 00                         movl 0x1234, %edx
+00030252:   66 8b 15 34 12 00                         movw 0x1234, %dx
+00030259:   8a 15 34 12 00 00                         movb 0x1234, %dl
+0003025f:   8a 35 34 12 00 00                         movb 0x1234, %dh
+00030265:   8b 13                                     movl (%ebx), %edx
+00030267:   8b 14 99                                  movl (%ecx,%ebx,4), %edx
+0003026a:   66 8b 14                                  movw (%ecx,%ebx,4), %dx
+0003026e:   8a 34 99                                  movb (%ecx,%ebx,4), %dh
+00030271:   8b 51 02                                  movl 0x2(%ecx), %edx
+00030274:   66 8b 51                                  movw 0x2(%ecx), %dx
+00030278:   8a 71 02                                  movb 0x2(%ecx), %dh
+0003027b:   8b 54 99 02                               movl 0x2(%ecx,%ebx,4), %edx
+0003027f:   66 8b 54 99                               movw 0x2(%ecx,%ebx,4), %dx
+00030284:   8a 74 99 02                               movb 0x2(%ecx,%ebx,4), %dh
+00030288:   8b 91 00 20 00 00                         movl 0x2000(%ecx), %edx
+0003028e:   66 8b 91 00 20 00                         movw 0x2000(%ecx), %dx
+00030295:   8a b1 00 20 00 00                         movb 0x2000(%ecx), %dh
+0003029b:   8b 94 99 00 20 00 00                      movl 0x2000(%ecx,%ebx,4), %edx
+000302a2:   66 8b 94 99 00 20 00                      movw 0x2000(%ecx,%ebx,4), %dx
+000302aa:   8a b4 99 00 20 00 00                      movb 0x2000(%ecx,%ebx,4), %dh
+000302b1:   b8 00 00 00 00                            movl $0x0, %eax
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x000302b6
+NEMU2 terminated

@@ -1,0 +1,211 @@
+
+phase2.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <KUjcwEWTkU>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 58             	sub    $0x58,%esp
+   6:	c7 45 c0 39 48 62 68 	movl   $0x68624839,-0x40(%ebp)
+   d:	c7 45 c4 73 52 6e 61 	movl   $0x616e5273,-0x3c(%ebp)
+  14:	c7 45 c8 09 49 33 43 	movl   $0x43334909,-0x38(%ebp)
+  1b:	c7 45 cc 6a 33 6b 4e 	movl   $0x4e6b336a,-0x34(%ebp)
+  22:	c7 45 d0 59 5a 61 62 	movl   $0x62615a59,-0x30(%ebp)
+  29:	c7 45 d4 71 68 67 56 	movl   $0x56676871,-0x2c(%ebp)
+  30:	c7 45 d8 34 39 47 63 	movl   $0x63473934,-0x28(%ebp)
+  37:	c7 45 dc 67 57 6f 63 	movl   $0x636f5767,-0x24(%ebp)
+  3e:	c7 45 e0 20 62 62 61 	movl   $0x61626220,-0x20(%ebp)
+  45:	c7 45 e4 6b 74 4d 36 	movl   $0x364d746b,-0x1c(%ebp)
+  4c:	c7 45 e8 49 46 43 31 	movl   $0x31434649,-0x18(%ebp)
+  53:	c7 45 ec 6e 4e 7a 43 	movl   $0x437a4e6e,-0x14(%ebp)
+  5a:	c7 45 f0 7a 68 41 00 	movl   $0x41687a,-0x10(%ebp)
+  61:	8d 45 c0             	lea    -0x40(%ebp),%eax
+  64:	89 04 24             	mov    %eax,(%esp)
+  67:	e8 fc ff ff ff       	call   68 <KUjcwEWTkU+0x68>
+			68: R_386_PC32	strlen
+  6c:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  6f:	83 7d 08 00          	cmpl   $0x0,0x8(%ebp)
+  73:	78 15                	js     8a <KUjcwEWTkU+0x8a>
+  75:	8b 45 08             	mov    0x8(%ebp),%eax
+  78:	3b 45 f4             	cmp    -0xc(%ebp),%eax
+  7b:	7d 0d                	jge    8a <KUjcwEWTkU+0x8a>
+  7d:	8d 55 c0             	lea    -0x40(%ebp),%edx
+  80:	8b 45 08             	mov    0x8(%ebp),%eax
+  83:	01 d0                	add    %edx,%eax
+  85:	0f b6 00             	movzbl (%eax),%eax
+  88:	eb 05                	jmp    8f <KUjcwEWTkU+0x8f>
+  8a:	b8 00 00 00 00       	mov    $0x0,%eax
+  8f:	c9                   	leave  
+  90:	c3                   	ret    
+
+00000091 <qWrLGWMj>:
+  91:	55                   	push   %ebp
+  92:	89 e5                	mov    %esp,%ebp
+  94:	83 ec 18             	sub    $0x18,%esp
+  97:	c7 44 24 04 02 00 00 	movl   $0x2,0x4(%esp)
+  9e:	00 
+			9b: R_386_32	.rodata
+  9f:	8b 45 08             	mov    0x8(%ebp),%eax
+  a2:	89 04 24             	mov    %eax,(%esp)
+  a5:	e8 fc ff ff ff       	call   a6 <qWrLGWMj+0x15>
+			a6: R_386_PC32	strcmp
+  aa:	85 c0                	test   %eax,%eax
+  ac:	74 02                	je     b0 <qWrLGWMj+0x1f>
+  ae:	eb 0b                	jmp    bb <qWrLGWMj+0x2a>
+  b0:	8b 45 0c             	mov    0xc(%ebp),%eax
+  b3:	89 04 24             	mov    %eax,(%esp)
+  b6:	e8 fc ff ff ff       	call   b7 <qWrLGWMj+0x26>
+			b7: R_386_PC32	puts
+  bb:	c9                   	leave  
+  bc:	c3                   	ret    
+
+000000bd <do_phase>:
+  bd:	55                   	push   %ebp
+  be:	89 e5                	mov    %esp,%ebp
+  c0:	6a 32                	push   $0x32
+  c2:	68 32 30 31 33       	push   $0x33313032
+  c7:	68 32 32 31 32       	push   $0x32313232
+  cc:	89 e2                	mov    %esp,%edx
+  ce:	68 45 57 57 00       	push   $0x575745
+  d3:	68 48 4e 5a 41       	push   $0x415a4e48
+  d8:	89 e1                	mov    %esp,%ecx
+  da:	52                   	push   %edx
+  db:	51                   	push   %ecx
+  dc:	e8 b0 ff ff ff       	call   91 <qWrLGWMj>
+  e1:	89 ec                	mov    %ebp,%esp
+  e3:	90                   	nop
+  e4:	90                   	nop
+  e5:	90                   	nop
+  e6:	90                   	nop
+  e7:	90                   	nop
+  e8:	90                   	nop
+  e9:	90                   	nop
+  ea:	90                   	nop
+  eb:	90                   	nop
+  ec:	90                   	nop
+  ed:	90                   	nop
+  ee:	90                   	nop
+  ef:	90                   	nop
+  f0:	90                   	nop
+  f1:	90                   	nop
+  f2:	90                   	nop
+  f3:	90                   	nop
+  f4:	90                   	nop
+  f5:	90                   	nop
+  f6:	90                   	nop
+  f7:	90                   	nop
+  f8:	90                   	nop
+  f9:	90                   	nop
+  fa:	90                   	nop
+  fb:	90                   	nop
+  fc:	90                   	nop
+  fd:	90                   	nop
+  fe:	90                   	nop
+  ff:	90                   	nop
+ 100:	5d                   	pop    %ebp
+ 101:	c3                   	ret    
+
+Disassembly of section .data:
+
+00000000 <phase_id>:
+   0:	00 00                	add    %al,(%eax)
+			0: R_386_32	.rodata
+	...
+
+00000004 <phase>:
+   4:	00 00                	add    %al,(%eax)
+			4: R_386_32	do_phase
+	...
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	32 00                	xor    (%eax),%al
+   2:	48                   	dec    %eax
+   3:	4e                   	dec    %esi
+   4:	5a                   	pop    %edx
+   5:	41                   	inc    %ecx
+   6:	45                   	inc    %ebp
+   7:	57                   	push   %edi
+   8:	57                   	push   %edi
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%edi)
+   3:	43                   	inc    %ebx
+   4:	3a 20                	cmp    (%eax),%ah
+   6:	28 47 4e             	sub    %al,0x4e(%edi)
+   9:	55                   	push   %ebp
+   a:	29 20                	sub    %esp,(%eax)
+   c:	34 2e                	xor    $0x2e,%al
+   e:	38 2e                	cmp    %ch,(%esi)
+  10:	35 20 32 30 31       	xor    $0x31303220,%eax
+  15:	35 30 36 32 33       	xor    $0x33323630,%eax
+  1a:	20 28                	and    %ch,(%eax)
+  1c:	52                   	push   %edx
+  1d:	65 64 20 48 61       	gs and %cl,%fs:0x61(%eax)
+  22:	74 20                	je     44 <phase+0x40>
+  24:	34 2e                	xor    $0x2e,%al
+  26:	38 2e                	cmp    %ch,(%esi)
+  28:	35 2d 34 34 29       	xor    $0x2934342d,%eax
+	...
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%eax)
+   4:	00 00                	add    %al,(%eax)
+   6:	00 00                	add    %al,(%eax)
+   8:	01 7a 52             	add    %edi,0x52(%edx)
+   b:	00 01                	add    %al,(%ecx)
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    %ebx,(%ebx)
+  11:	0c 04                	or     $0x4,%al
+  13:	04 88                	add    $0x88,%al
+  15:	01 00                	add    %eax,(%eax)
+  17:	00 1c 00             	add    %bl,(%eax,%eax,1)
+  1a:	00 00                	add    %al,(%eax)
+  1c:	1c 00                	sbb    $0x0,%al
+  1e:	00 00                	add    %al,(%eax)
+  20:	00 00                	add    %al,(%eax)
+			20: R_386_PC32	.text
+  22:	00 00                	add    %al,(%eax)
+  24:	91                   	xchg   %eax,%ecx
+  25:	00 00                	add    %al,(%eax)
+  27:	00 00                	add    %al,(%eax)
+  29:	41                   	inc    %ecx
+  2a:	0e                   	push   %cs
+  2b:	08 85 02 42 0d 05    	or     %al,0x50d4202(%ebp)
+  31:	02 8d c5 0c 04 04    	add    0x4040cc5(%ebp),%cl
+  37:	00 1c 00             	add    %bl,(%eax,%eax,1)
+  3a:	00 00                	add    %al,(%eax)
+  3c:	3c 00                	cmp    $0x0,%al
+  3e:	00 00                	add    %al,(%eax)
+  40:	91                   	xchg   %eax,%ecx
+			40: R_386_PC32	.text
+  41:	00 00                	add    %al,(%eax)
+  43:	00 2c 00             	add    %ch,(%eax,%eax,1)
+  46:	00 00                	add    %al,(%eax)
+  48:	00 41 0e             	add    %al,0xe(%ecx)
+  4b:	08 85 02 42 0d 05    	or     %al,0x50d4202(%ebp)
+  51:	68 c5 0c 04 04       	push   $0x4040cc5
+  56:	00 00                	add    %al,(%eax)
+  58:	1c 00                	sbb    $0x0,%al
+  5a:	00 00                	add    %al,(%eax)
+  5c:	5c                   	pop    %esp
+  5d:	00 00                	add    %al,(%eax)
+  5f:	00 bd 00 00 00 45    	add    %bh,0x45000000(%ebp)
+			60: R_386_PC32	.text
+  65:	00 00                	add    %al,(%eax)
+  67:	00 00                	add    %al,(%eax)
+  69:	41                   	inc    %ecx
+  6a:	0e                   	push   %cs
+  6b:	08 85 02 42 0d 05    	or     %al,0x50d4202(%ebp)
+  71:	02 41 c5             	add    -0x3b(%ecx),%al
+  74:	0c 04                	or     $0x4,%al
+  76:	04 00                	add    $0x0,%al

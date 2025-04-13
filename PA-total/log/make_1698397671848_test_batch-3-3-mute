@@ -1,0 +1,177 @@
+> test_batch-3-3-mute
+make-[1]: Entering directory '/home/pa221220132/pa_nju'
+./nemu/nemu --autorun --testcase mov-c --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/mov-c[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000c2
+NEMU2 terminated
+./nemu/nemu --autorun --testcase mov-jcc --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/mov-jcc[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000c1
+NEMU2 terminated
+./nemu/nemu --autorun --testcase add --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/add[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100088
+NEMU2 terminated
+./nemu/nemu --autorun --testcase add-longlong --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/add-longlong[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100100
+NEMU2 terminated
+./nemu/nemu --autorun --testcase if-else --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/if-else[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000ae
+NEMU2 terminated
+./nemu/nemu --autorun --testcase fib --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/fib[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100064
+NEMU2 terminated
+./nemu/nemu --autorun --testcase bubble-sort --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/bubble-sort[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000e7
+NEMU2 terminated
+./nemu/nemu --autorun --testcase quick-sort --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/quick-sort[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001001bc
+NEMU2 terminated
+./nemu/nemu --autorun --testcase select-sort --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/select-sort[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000e7
+NEMU2 terminated
+./nemu/nemu --autorun --testcase max --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/max[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x0010009a
+NEMU2 terminated
+./nemu/nemu --autorun --testcase min3 --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/min3[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000c7
+NEMU2 terminated
+./nemu/nemu --autorun --testcase pascal --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/pascal[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100134
+NEMU2 terminated
+./nemu/nemu --autorun --testcase bit  --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/bit[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001001f4
+NEMU2 terminated
+./nemu/nemu --autorun --testcase movsx --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/movsx[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100132
+NEMU2 terminated
+./nemu/nemu --autorun --testcase sub-longlong --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/sub-longlong[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000f7
+NEMU2 terminated
+./nemu/nemu --autorun --testcase fact --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/fact[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100094
+NEMU2 terminated
+./nemu/nemu --autorun --testcase gotbaha --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/gotbaha[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000c5
+NEMU2 terminated
+./nemu/nemu --autorun --testcase leap-year --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/leap-year[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100086
+NEMU2 terminated
+./nemu/nemu --autorun --testcase matrix-mul-small --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/matrix-mul-small[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100110
+NEMU2 terminated
+./nemu/nemu --autorun --testcase matrix-mul --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/matrix-mul[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x0010015d
+NEMU2 terminated
+./nemu/nemu --autorun --testcase mul-longlong  --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/mul-longlong[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x0010011a
+NEMU2 terminated
+./nemu/nemu --autorun --testcase prime --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/prime[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100088
+NEMU2 terminated
+./nemu/nemu --autorun --testcase shuixianhua --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/shuixianhua[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000fe
+NEMU2 terminated
+./nemu/nemu --autorun --testcase sum --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/sum[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x0010003e
+NEMU2 terminated
+./nemu/nemu --autorun --testcase wanshu --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/wanshu[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100086
+NEMU2 terminated
+./nemu/nemu --autorun --testcase struct --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/struct[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000ec
+NEMU2 terminated
+./nemu/nemu --autorun --testcase string --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/string[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x00100150
+NEMU2 terminated
+./nemu/nemu --autorun --testcase hello-str  --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/hello-str[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;32mGOOD[0m TRAP at eip = 0x001000d8
+NEMU2 terminated
+./nemu/nemu --autorun --testcase test-float --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/test-float[0m
+[0;31mnemu trap output: [0m[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
+[0;31mnemu trap output: [0m[1;35m[src/elf/elf.c,29,loader] {kernel} ELF loading from ram disk.[0m
+nemu: HIT [0;31mBAD[0m TRAP at eip = 0x001000bd
+NEMU2 terminated
+make-[1]: Leaving directory '/home/pa221220132/pa_nju'

@@ -1,0 +1,105 @@
+
+phase3.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <do_phase>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 28             	sub    $0x28,%esp
+   6:	c7 45 ea 63 6e 68 72 	movl   $0x72686e63,-0x16(%ebp)
+   d:	c7 45 ee 6a 73 61 70 	movl   $0x7061736a,-0x12(%ebp)
+  14:	66 c7 45 f2 76 00    	movw   $0x76,-0xe(%ebp)
+  1a:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+  21:	eb 24                	jmp    47 <do_phase+0x47>
+  23:	8d 55 ea             	lea    -0x16(%ebp),%edx
+  26:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  29:	01 d0                	add    %edx,%eax
+  2b:	0f b6 00             	movzbl (%eax),%eax
+  2e:	0f b6 c0             	movzbl %al,%eax
+  31:	0f b6 80 00 00 00 00 	movzbl 0x0(%eax),%eax
+			34: R_386_32	tWvZarRStm
+  38:	0f be c0             	movsbl %al,%eax
+  3b:	89 04 24             	mov    %eax,(%esp)
+  3e:	e8 fc ff ff ff       	call   3f <do_phase+0x3f>
+			3f: R_386_PC32	putchar
+  43:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+  47:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  4a:	83 f8 08             	cmp    $0x8,%eax
+  4d:	76 d4                	jbe    23 <do_phase+0x23>
+  4f:	c7 04 24 0a 00 00 00 	movl   $0xa,(%esp)
+  56:	e8 fc ff ff ff       	call   57 <do_phase+0x57>
+			57: R_386_PC32	putchar
+  5b:	c9                   	leave  
+  5c:	c3                   	ret    
+
+Disassembly of section .data:
+
+00000000 <phase_id>:
+   0:	00 00                	add    %al,(%eax)
+			0: R_386_32	.rodata
+	...
+
+00000004 <phase>:
+   4:	00 00                	add    %al,(%eax)
+			4: R_386_32	do_phase
+	...
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	33 00                	xor    (%eax),%eax
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%edi)
+   3:	43                   	inc    %ebx
+   4:	3a 20                	cmp    (%eax),%ah
+   6:	28 47 4e             	sub    %al,0x4e(%edi)
+   9:	55                   	push   %ebp
+   a:	29 20                	sub    %esp,(%eax)
+   c:	34 2e                	xor    $0x2e,%al
+   e:	38 2e                	cmp    %ch,(%esi)
+  10:	35 20 32 30 31       	xor    $0x31303220,%eax
+  15:	35 30 36 32 33       	xor    $0x33323630,%eax
+  1a:	20 28                	and    %ch,(%eax)
+  1c:	52                   	push   %edx
+  1d:	65 64 20 48 61       	gs and %cl,%fs:0x61(%eax)
+  22:	74 20                	je     44 <phase+0x40>
+  24:	34 2e                	xor    $0x2e,%al
+  26:	38 2e                	cmp    %ch,(%esi)
+  28:	35 2d 34 34 29       	xor    $0x2934342d,%eax
+	...
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%eax)
+   4:	00 00                	add    %al,(%eax)
+   6:	00 00                	add    %al,(%eax)
+   8:	01 7a 52             	add    %edi,0x52(%edx)
+   b:	00 01                	add    %al,(%ecx)
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    %ebx,(%ebx)
+  11:	0c 04                	or     $0x4,%al
+  13:	04 88                	add    $0x88,%al
+  15:	01 00                	add    %eax,(%eax)
+  17:	00 1c 00             	add    %bl,(%eax,%eax,1)
+  1a:	00 00                	add    %al,(%eax)
+  1c:	1c 00                	sbb    $0x0,%al
+  1e:	00 00                	add    %al,(%eax)
+  20:	00 00                	add    %al,(%eax)
+			20: R_386_PC32	.text
+  22:	00 00                	add    %al,(%eax)
+  24:	5d                   	pop    %ebp
+  25:	00 00                	add    %al,(%eax)
+  27:	00 00                	add    %al,(%eax)
+  29:	41                   	inc    %ecx
+  2a:	0e                   	push   %cs
+  2b:	08 85 02 42 0d 05    	or     %al,0x50d4202(%ebp)
+  31:	02 59 c5             	add    -0x3b(%ecx),%bl
+  34:	0c 04                	or     $0x4,%al
+  36:	04 00                	add    $0x0,%al

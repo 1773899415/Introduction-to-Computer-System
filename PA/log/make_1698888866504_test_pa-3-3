@@ -1,0 +1,29 @@
+> test_pa-3-3
+cd nemu && make
+------make------
+1698888867009
+Thu Nov 2 09:34:27 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/nemu'
+make-[1]: 'nemu' is up to date.
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/nemu'
+cd testcase && make
+------make------
+1698888867034
+Thu Nov 2 09:34:27 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/testcase'
+gcc -ggdb3 -MMD -MP -Wall -m32 -march=i386 -fno-pic -fno-builtin -fno-stack-protector -I../include -I../libs/newlib/include -c -o src/start.o start.S	
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/testcase'
+cd kernel && make
+------make------
+1698888867073
+Thu Nov 2 09:34:27 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/kernel'
+make-[1]: 'kernel' is up to date.
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/kernel'
+make test_batch-3-3-mute
+------make------
+1698888867154
+Thu Nov 2 09:34:27 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju'
+./nemu/nemu --autorun --testcase mov-c --kernel
+make-[1]: Leaving directory '/home/pa221220132/pa_nju'

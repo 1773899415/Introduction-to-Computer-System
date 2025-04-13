@@ -1,0 +1,57 @@
+> test_pa-2-3
+cd nemu && make
+------make------
+1698804836476
+Wed Nov 1 10:13:56 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/nemu'
+make-[1]: 'nemu' is up to date.
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/nemu'
+cd testcase && make
+------make------
+1698804836502
+Wed Nov 1 10:13:56 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/testcase'
+gcc -ggdb3 -MMD -MP -Wall -m32 -march=i386 -fno-pic -fno-builtin -fno-stack-protector -I../include -I../libs/newlib/include -c -o src/start.o start.S	
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/testcase'
+cd kernel && make
+------make------
+1698804836545
+Wed Nov 1 10:13:56 CST 2023
+make-[1]: Entering directory '/home/pa221220132/pa_nju/kernel'
+make-[1]: 'kernel' is up to date.
+make-[1]: Leaving directory '/home/pa221220132/pa_nju/kernel'
+echo "\e[0;31mTest expressions yourself\e[0m"
+[0;31mTest expressions yourself[0m
+./nemu/nemu --testcase add --kernel
+NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/add[0m
+(nemu) p 0x11
+match regex[8] at position 4 with len 4: 0x11   type is 262
+17
+(nemu) p 0x11 
+match regex[8] at position 3 with len 3: 0x1   type is 262
+17
+(nemu) p 5
+match regex[9] at position 1 with len 1: 5   type is 259
+5
+(nemu) p 4
+match regex[9] at position 1 with len 1: 4   type is 259
+4
+(nemu) p 55
+match regex[9] at position 2 with len 2: 55   type is 259
+5511
+(nemu) p 54
+match regex[9] at position 2 with len 2: 54   type is 259
+5411
+(nemu) p 54-  55
+match regex[9] at position 3 with len 3: 555   type is 259
+5551
+(nemu) p 555[1P455555
+match regex[9] at position 7 with len 7: 5455555   type is 259
+5455555
+(nemu) p 5455555      
+match regex[9] at position 1 with len 1: 5   type is 259
+5455555
+(nemu) p 5 4
+match regex[9] at position 1 with len 1: 4   type is 259
+4455555
+(nemu) 

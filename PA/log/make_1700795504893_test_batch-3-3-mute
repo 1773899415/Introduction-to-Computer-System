@@ -1,7 +1,0 @@
-> test_batch-3-3-mute
-make-[1]: Entering directory '/home/pa221220132/pa_nju'
-./nemu/nemu --autorun --testcase mov-c --kernel
-NEMU load and execute img: [1m[32m./kernel/kernel.img[0m  elf: [1m[36m./testcase/bin/mov-c[0m
-[1;35m[src/main.c,82,init_cond] {kernel} Hello, NEMU world![0m
-[1;35m[src/elf/elf.c,26,loader] {kernel} ELF loading from hard disk.[0m
-make-[1]: Leaving directory '/home/pa221220132/pa_nju'
